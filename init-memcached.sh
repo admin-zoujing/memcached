@@ -4,8 +4,6 @@
 sourceinstall=/usr/local/src/memcached
 chmod -R 777 $sourceinstall
 #时间时区同步，修改主机名
-ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
-
 ntpdate  ntp1.aliyun.com
 hwclock --systohc
 echo "*/30 * * * * root ntpdate -s  ntp1.aliyun.com" >> /etc/crontab
